@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+// app/Http/Controllers/Admin/ProjectController.php
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
@@ -22,12 +24,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|max:255',
             'description' => 'required',
         ]);
 
         Project::create($request->all());
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('success', 'Progetto creato con successo!');
     }
 
     public function show(Project $project)
@@ -43,17 +45,17 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|max:255',
             'description' => 'required',
         ]);
 
         $project->update($request->all());
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('success', 'Progetto aggiornato con successo!');
     }
 
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('success', 'Progetto eliminato con successo!');
     }
 }
