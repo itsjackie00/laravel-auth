@@ -29,7 +29,8 @@ class ProjectController extends Controller
         ]);
 
         Project::create($request->all());
-        return redirect()->route('projects.index')->with('success', 'Progetto creato con successo!');
+        // return redirect()-> route('projects.index');
+        return redirect()->route('projects.index')->with('success', 'Progetto creato !');
     }
 
     public function show(Project $project)
@@ -50,12 +51,12 @@ class ProjectController extends Controller
         ]);
 
         $project->update($request->all());
-        return redirect()->route('projects.index')->with('success', 'Progetto aggiornato con successo!');
+        return redirect()->route('projects.index')->with('success', 'Progetto aggiornato !');
     }
 
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect()->route('projects.index')->with('success', 'Progetto eliminato con successo!');
+        return redirect()->route('projects.index')->with('success', 'Progetto eliminato !');
     }
 }
