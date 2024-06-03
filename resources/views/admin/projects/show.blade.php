@@ -1,5 +1,5 @@
 <!-- resources/views/admin/projects/show.blade.php -->
-@extends('layouts.app')
+@extends('layouts.admin.admin')
 
 @section('content')
 <div class="container">
@@ -8,3 +8,4 @@
     <a href="{{ route('projects.index') }}" class="btn btn-primary">Torna indietro</a>
 </div>
 @endsection
+

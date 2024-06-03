@@ -1,5 +1,5 @@
 <!-- resources/views/admin/projects/create.blade.php -->
-@extends('layouts.app')
+@extends('layouts.admin.admin')
 
 @section('content')
 <div class="container">
@@ -14,7 +14,9 @@
             <label for="description">Descrizione</label>
             <textarea name="description" class="form-control" required></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Salva</button>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Salva</button>
+        </div>
     </form>
 </div>
 @endsection

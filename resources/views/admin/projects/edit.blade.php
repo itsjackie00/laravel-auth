@@ -1,5 +1,5 @@
 <!-- resources/views/admin/projects/edit.blade.php -->
-@extends('layouts.app')
+@extends('layouts.admin.admin')
 
 @section('content')
 <div class="container">
@@ -19,3 +19,4 @@
     </form>
 </div>
 @endsection
+
