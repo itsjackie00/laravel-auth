@@ -9,6 +9,12 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
-    color: $text-color;
+
+// Add any custom CSS here  
+header{
+    background-color: blue;
+   
+}
+#app{
+    background-color: red;
 }
